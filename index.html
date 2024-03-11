@@ -3,22 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Hotel Yeruti</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <div id="top-navBar">top-navBar</div>
-        <div id="navBar">
-          logo
-          <ul>
-            <li>Inicio</li>
-            <li>El Hotel</li>
-            <li>Contacto</li>
-            <li class="cta">Contactanos</li>
-          </ul>
+      <nav id="navBar">
+        <!-- <div id="top-navBar">
+          <div class="wrapper">
+            <span>
+              <img class="icon" src="./assets/icons/whatsapp.svg" />
+              whatsapp: xxxxxx
+            </span>
+
+            <span> | </span>
+            <span>
+              <img class="icon" src="./assets/icons/email.svg" /> email:
+              asdfdasf@email.com
+            </span>
+          </div>
+        </div> -->
+        <div id="bottom-navBar">
+          <div class="wrapper">
+            <a href=""><img src="./assets/logo.svg" /></a>
+            <ul class="nav-links">
+              <li class="active-page"><a href="">Inicio</a></li>
+              <li><a href="">El Hotel</a></li>
+              <li><a href="">Contacto</a></li>
+              <li>
+                <button class="cta sendMessage">Escribenos</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -29,4 +46,15 @@
 
     <footer></footer>
   </body>
+
+  <script>
+    const messageButton = document.querySelector('.sendMessage');
+    messageButton.addEventListener('click', sendMessage);
+
+    // https://wa.link/0rbnp9
+    const url = 'https://web.whatsapp.com/send?phone=59899224710&text=Hola';
+    function sendMessage() {
+      window.open(url);
+    }
+  </script>
 </html>
