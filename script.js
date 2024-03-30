@@ -85,7 +85,6 @@ function openModal(title, indexGallery) {
     modalTitle.innerText = title;
   } else {
     modalImg.src = `./assets/images/gallery/galeria-${modalIndex}.jpg`;
-    // modalImg.src = `./assets/images/gallery/galeria-01.jpg`;
     modalTitle.classList.add("hidden");
   }
 
