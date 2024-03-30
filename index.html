@@ -1,60 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Hotel Yeruti</title>
 
+    <link
+      rel="icon"
+      href="/assets/favicon.png"
+      sizes="32x32"
+      type="image/png"
+    />
+
     <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <header>
       <nav id="navBar">
-        <!-- <div id="top-navBar">
+        <div id="top-navBar">
           <div class="wrapper">
             <span>
               <img class="icon" src="./assets/icons/whatsapp.svg" />
-              whatsapp: xxxxxx
+              +598 99 822 848
             </span>
 
             <span> | </span>
             <span>
-              <img class="icon" src="./assets/icons/email.svg" /> email:
-              asdfdasf@email.com
+              <img class="icon" src="./assets/icons/email.svg" />
+              hotelyeruti@gmail.com
             </span>
           </div>
-        </div> -->
+        </div>
         <div id="bottom-navBar">
           <div class="wrapper">
             <a href=""><img src="./assets/logo.svg" /></a>
-            <ul class="nav-links">
-              <li class="active-page"><a href="">Inicio</a></li>
-              <li><a href="">El Hotel</a></li>
-              <li><a href="">Contacto</a></li>
-              <li>
-                <button class="cta sendMessage">Escribenos</button>
-              </li>
-            </ul>
+            <div>
+              <ul class="nav-links">
+                <li class="active-page">
+                  <a href="">Inicio</a>
+                </li>
+                <li><a href="">El Hotel</a></li>
+                <li><a href="">Contacto</a></li>
+              </ul>
+              <button class="cta sendMessage">Escribenos</button>
+            </div>
           </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <section id="hero">hero image</section>
+      <section id="hero">
+        <div class="wrapper">
+          <!-- <h1>Hotel Yerutí</h1> -->
+          <h1>Tranquilidad, calidez y confort</h1>
+          <p class="hero-text">
+            Tu lugar en <strong>La Paloma, Uruguay,</strong> un sitio ideal
+            para tus vacaciónes
+          </p>
+          <!-- <button class="cta">Escribenos</button> -->
+        </div>
+      </section>
+
+      <section id="rooms">
+        <div class="wrapper">
+          <h2>Nuestras habitaciones</h2>
+          <ul class="room-wrapper">
+            <li class="room-card" id="h-doble">
+              <h3>Habitación doble</h3>
+              <div>
+                <img
+                  src="./assets/images/habitaciones/doble-1.jpg"
+                  alt="Habitacion doble"
+                />
+                <button>+</button>
+              </div>
+            </li>
+
+            <li class="room-card" id="h-triple">
+              <h3>Habitación triple</h3>
+              <div>
+                <img
+                  src="./assets/images/habitaciones/triple-1.jpg"
+                  alt="Habitación triple"
+                />
+                <button>+</button>
+              </div>
+            </li>
+
+            <li class="room-card" id="h-cuadruple">
+              <h3>Habitación cuádruple</h3>
+              <div>
+                <img
+                  src="./assets/images/habitaciones/cuadruple-1.jpg"
+                  alt="Habitación cuádruple"
+                />
+                <button>+</button>
+              </div>
+            </li>
+          </ul>
+          <p>
+            Contamos con amplias y luminosas habitaciones, para 2, 3 y 4
+            personas, disponibles con aire acondicionado o ventilador de
+            techo. Todas son con entrada independiente desde el exterior e
+            incluyen tv cable, frigobar, baño privado, ropa blanca y
+            servicio de mucama. Amplia cobertura de wifi gratuita.
+          </p>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="wrapper">
+          <div>
+            <p>Calidez y confort</p>
+            <h2>Servicios incluidos</h2>
+          </div>
+          <ul>
+            <li>
+              <img
+                src="./assets/icons/services/service-1.svg"
+                alt=""
+                class="service-icon"
+              />
+              <span>Ropa blanca</span>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/services/service-2.svg"
+                alt=""
+                class="service-icon"
+              />
+              <span>TV LCD por cable</span>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/services/service-3.svg"
+                alt=""
+                class="service-icon"
+              />
+              <span>Pet friendly</span>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/services/service-4.svg"
+                alt=""
+                class="service-icon"
+              />
+              WI-FI
+            </li>
+            <li>
+              <img
+                src="./assets/icons/services/service-5.svg"
+                alt=""
+                class="service-icon"
+              />
+              <span>Estacionamiento</span>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/services/service-6.svg"
+                alt=""
+                class="service-icon"
+              />
+              <span>Información turística</span>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/services/service-7.svg"
+                alt=""
+                class="service-icon"
+              />
+              <span> Desayuno (opcional)</span>
+            </li>
+            <li>
+              <img
+                src="./assets/icons/services/service-8.svg"
+                alt=""
+                class="service-icon"
+              />
+              <span> Servicio de limpieza</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="location">
+        <div class="wrapper">
+          <h2>Ubicación</h2>
+
+          <div>
+            <h3>Grulla 27001, La Paloma - Uruguay</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7805.338469813865!2d-54.167224695460796!3d-34.66125419795513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95749ca5062329b5%3A0xff0a44eba6bf8397!2sHotel%20Yerut%C3%AD%200059899822848!5e0!3m2!1sen!2suy!4v1710943573521!5m2!1sen!2suy"
+              width="80%"
+              height="450"
+              style="border: none; margin: auto"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="wrapper">
+        <span>
+          <img class="icon" src="./assets/icons/whatsapp.svg" />
+          Grulla 27001, La Paloma – Uruguay
+        </span>
+        <span> | </span>
+        <span>
+          <img class="icon" src="./assets/icons/whatsapp.svg" />
+          +598 44 796 235 / +598 99 635 707
+        </span>
+
+        <span> | </span>
+        <span>
+          <img class="icon" src="./assets/icons/email.svg" /> email:
+          hotelyeruti@gmail.com
+        </span>
+      </div>
+      <hr />
+      <div>Siguienos : instagram / facebook</div>
+      <div>clima</div>
+    </footer>
+
+    <div class="modal hidden" id="modal">
+      <div class="wrapper">
+        <h2 id="modal-title">%TITLE%</h2>
+        <button id="modal-prev"><</button>
+        <img
+          id="modal-img"
+          src="./assets/images/habitaciones/doble-1.jpg"
+          alt=""
+        />
+        <button id="modal-next">></button>
+        <button id="modal-close">X</button>
+      </div>
+    </div>
   </body>
-
-  <script>
-    const messageButton = document.querySelector('.sendMessage');
-    messageButton.addEventListener('click', sendMessage);
-
-    // https://wa.link/0rbnp9
-    const url = 'https://web.whatsapp.com/send?phone=59899224710&text=Hola';
-    function sendMessage() {
-      window.open(url);
-    }
-  </script>
 </html>
