@@ -19,6 +19,13 @@ document
   .getElementById("h-cuadruple")
   .addEventListener("click", () => openModal("Habitación cuádruple"));
 
+// GALERÍA
+
+const galElements = document.querySelectorAll("#gallery img");
+galElements.forEach((el, i) =>
+  el.addEventListener("click", () => openModal("gallery", i + 1))
+);
+
 // close modal
 document
   .getElementById("modal-close")
@@ -48,35 +55,69 @@ const modalTitle = document.querySelector(".modal h2");
 const modalBtnPrev = document.getElementById("modal-prev");
 const modalBtnNext = document.getElementById("modal-next");
 let imgURL;
+let mode;
 
-function openModal(title) {
+function openModal(title, indexGallery) {
   switch (title) {
     case "Habitación doble":
       imgURL = "doble";
+      mode = "room";
       break;
     case "Habitación triple":
       imgURL = "triple";
+      mode = "room";
       break;
     case "Habitación cuádruple":
       imgURL = "cuadruple";
+      mode = "room";
+      break;
+    case "gallery":
+      modalIndex = indexGallery;
+      mode = "gallery";
       break;
     default:
       throw new Error("invalid input");
   }
 
-  modalIndex = 1;
-  modalImg.src = `./assets/images/habitaciones/${imgURL}-${modalIndex}.jpg`;
-  modalTitle.innerText = title;
+  if (mode === "room") {
+    modalIndex = 1;
+    modalImg.src = `./assets/images/habitaciones/${imgURL}-${modalIndex}.jpg`;
+    modalTitle.innerText = title;
+  } else {
+    modalImg.src = `./assets/images/gallery/galeria-${modalIndex}.jpg`;
+    // modalImg.src = `./assets/images/gallery/galeria-01.jpg`;
+    modalTitle.classList.add("hidden");
+  }
+
   modal.classList.remove("hidden");
 
-  const prevEventListener = () => changeModalImage("prev", imgURL);
-  const nextEventListener = () => changeModalImage("next", imgURL);
+  const prevEventListener = () => changeModalImage("prev", imgURL, mode);
+  const nextEventListener = () => changeModalImage("next", imgURL, mode);
+
+  const documentEventListener = (e) => {
+    switch (e.keyCode) {
+      case 37:
+        changeModalImage("prev", imgURL, mode);
+        break;
+      case 39:
+        changeModalImage("next", imgURL, mode);
+        break;
+      case 27:
+        closeModal();
+        break;
+      default:
+        break;
+    }
+  };
 
   modalBtnPrev.addEventListener("click", prevEventListener);
+  document.addEventListener("keydown", documentEventListener);
+
   modalBtnNext.addEventListener("click", nextEventListener);
 
   modalBtnPrev._prevEventListener = prevEventListener;
   modalBtnNext._nextEventListener = nextEventListener;
+  document._documentEventListener = documentEventListener;
 }
 
 function closeModal() {
@@ -89,22 +130,38 @@ function closeModal() {
     modalBtnNext._nextEventListener
   );
 
+  document.removeEventListener("keydown", document._documentEventListener);
+
   modal.classList.add("hidden");
+
+  delete modalBtnPrev._prevEventListener;
+  delete modalBtnNext._nextEventListener;
+  delete document._documentEventListener;
 }
 
-function changeModalImage(input, room) {
+function changeModalImage(input, room, mode) {
   switch (input) {
     case "prev":
       modalIndex--;
-      if (modalIndex < 1) modalIndex = 5;
+      if (mode === "room") {
+        if (modalIndex < 1) modalIndex = 5;
+      } else {
+        if (modalIndex < 1) modalIndex = 16;
+      }
       break;
     case "next":
       modalIndex++;
-      if (modalIndex > 5) modalIndex = 1;
+      if (mode === "room") {
+        if (modalIndex > 5) modalIndex = 1;
+      } else {
+        if (modalIndex > 16) modalIndex = 1;
+      }
       break;
     default:
       throw new Error("invalid input " + input);
   }
 
-  modalImg.src = `./assets/images/habitaciones/${room}-${modalIndex}.jpg`;
+  mode === "room"
+    ? (modalImg.src = `./assets/images/habitaciones/${room}-${modalIndex}.jpg`)
+    : (modalImg.src = `./assets/images/gallery/galeria-${modalIndex}.jpg`);
 }

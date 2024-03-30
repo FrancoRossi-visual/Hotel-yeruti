@@ -18,31 +18,32 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="./script.js"></script>
   </head>
+
   <body>
     <header>
       <nav id="navBar">
         <div id="top-navBar">
           <div class="wrapper">
-            <span>
+            <a
+              href="https://web.whatsapp.com/send?phone=59899224710&text=Hola"
+              target="_blank"
+            >
               <img class="icon" src="./assets/icons/whatsapp.svg" />
               +598 99 822 848
-            </span>
+            </a>
 
             <span> | </span>
-            <span>
+            <a href="mailto:hotelyeruti@gmail.com">
               <img class="icon" src="./assets/icons/email.svg" />
               hotelyeruti@gmail.com
-            </span>
+            </a>
           </div>
         </div>
         <div id="bottom-navBar">
           <div class="wrapper">
             <a href=""><img src="./assets/logo.svg" /></a>
-            <div>
+            <div class="pc-nav">
               <ul class="nav-links">
-                <li class="active-page">
-                  <a href="">Inicio</a>
-                </li>
                 <li><a href="">El Hotel</a></li>
                 <li><a href="">Contacto</a></li>
               </ul>
@@ -66,8 +67,30 @@
         </div>
       </section>
 
-      <section id="rooms">
+      <button id="whatsapp-button" class="cta">
+        <img src="./assets/icons/whatsapp.svg" alt="" />
+      </button>
+
+      <section id="info">
         <div class="wrapper">
+          <h1>Hotel Yeruti</h1>
+          <div id="claim">
+            <p>
+              Rodeado de un entorno natural, con habitaciones totalmente
+              equipadas y con entrada independiente desde el exterior, se
+              encuentra ubicado en el balneario La Paloma, a 300 metros de
+              la playa La Balconada, a unas 5 del centro de La Paloma y a
+              pocos metros de todos los servicios, en una zona
+              privilegiada, super tranquila y cerca de todo.
+            </p>
+            <p>
+              La atencion personalizada que sólo sus dueños pueden ofrecer,
+              sumado al mejor asesoramiento sobre qué hacer en La Paloma y
+              alrededores transformarán a Hotel Yeruti en la mejor opción
+              para unas vacaciones ideales.
+            </p>
+          </div>
+
           <h2>Nuestras habitaciones</h2>
           <ul class="room-wrapper">
             <li class="room-card" id="h-doble">
@@ -206,29 +229,163 @@
           </div>
         </div>
       </section>
+
+      <section id="gallery">
+        <div class="wrapper">
+          <h2>Más fotos</h2>
+          <ul>
+            <li>
+              <img
+                id="gal-1"
+                src="./assets/images/gallery/galeria-1.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-2"
+                src="./assets/images/gallery/galeria-2.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-3"
+                src="./assets/images/gallery/galeria-3.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-4"
+                src="./assets/images/gallery/galeria-4.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-5"
+                src="./assets/images/gallery/galeria-5.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-6"
+                src="./assets/images/gallery/galeria-6.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-7"
+                src="./assets/images/gallery/galeria-7.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-8"
+                src="./assets/images/gallery/galeria-8.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-9"
+                src="./assets/images/gallery/galeria-9.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-10"
+                src="./assets/images/gallery/galeria-10.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-11"
+                src="./assets/images/gallery/galeria-11.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-12"
+                src="./assets/images/gallery/galeria-12.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-13"
+                src="./assets/images/gallery/galeria-13.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-14"
+                src="./assets/images/gallery/galeria-14.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-15"
+                src="./assets/images/gallery/galeria-15.jpg"
+              />
+            </li>
+            <li>
+              <img
+                id="gal-16"
+                src="./assets/images/gallery/galeria-16.jpg"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer>
       <div class="wrapper">
-        <span>
-          <img class="icon" src="./assets/icons/whatsapp.svg" />
-          Grulla 27001, La Paloma – Uruguay
-        </span>
-        <span> | </span>
-        <span>
-          <img class="icon" src="./assets/icons/whatsapp.svg" />
-          +598 44 796 235 / +598 99 635 707
-        </span>
-
-        <span> | </span>
-        <span>
-          <img class="icon" src="./assets/icons/email.svg" /> email:
-          hotelyeruti@gmail.com
-        </span>
+        <div id="contact">
+          <h3>Contacto:</h3>
+          <ul>
+            <li>
+              <img class="icon" src="./assets/icons/location.svg" />
+              <span> Grulla 27001, La Paloma – Uruguay </span>
+            </li>
+            <li>
+              <img class="icon" src="./assets/icons/whatsapp.svg" />
+              <span>
+                +598 99 822 848
+                <!-- +598 44 796 235 / +598 99 635 707 -->
+              </span>
+            </li>
+            <li>
+              <img class="icon" src="./assets/icons/email.svg" />
+              <span>
+                <a href="mailto:hotelyeruti@gmail.com"
+                  >hotelyeruti@gmail.com</a
+                >
+              </span>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div id="redes">
+          <h3>Siguienos:</h3>
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/hotel_yeruti/">
+                <img
+                  src="./assets/icons/instagram-logo.svg"
+                  alt="logo de instagram"
+                />
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/hotelyeruti/">
+                <img
+                  src="./assets/icons/facebook-logo.svg"
+                  alt="logo de facebook"
+                />
+                <span>Facebook</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <hr />
-      <div>Siguienos : instagram / facebook</div>
-      <div>clima</div>
     </footer>
 
     <div class="modal hidden" id="modal">
