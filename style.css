@@ -543,7 +543,7 @@ footer {
           transition: transform 0.5s, opacity 0.25s;
 
           &:hover {
-            transform: scale(1.075);
+            transform: scale(1.05);
           }
 
           &:not(:hover) {
