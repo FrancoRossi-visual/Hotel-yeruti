@@ -38,7 +38,7 @@ document.getElementById("modal").addEventListener("click", (e) => {
 // WHATSAPP
 
 const messageButton = document.querySelectorAll(".sendMessage");
-messageButton.forEach((el = el.addEventListener("click", sendMessage)));
+messageButton.forEach((el) => el.addEventListener("click", sendMessage));
 
 // https://wa.link/0rbnp9
 const url = "https://web.whatsapp.com/send?phone=59899224710&text=Hola";
