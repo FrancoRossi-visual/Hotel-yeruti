@@ -3,15 +3,11 @@
 // Add listeners to card
 
 // card 1 habitación doble
-document
-  .getElementById('h-doble')
-  .addEventListener('click', () => openModal('Habitación doble'));
+document.getElementById('h-doble').addEventListener('click', () => openModal('Habitación doble'));
 
 // card 2 habitación triple
 
-document
-  .getElementById('h-triple')
-  .addEventListener('click', () => openModal('Habitación triple'));
+document.getElementById('h-triple').addEventListener('click', () => openModal('Habitación triple'));
 
 // card 3 habitación cuádruple
 
@@ -22,14 +18,10 @@ document
 // GALERÍA
 
 const galElements = document.querySelectorAll('#gallery img');
-galElements.forEach((el, i) =>
-  el.addEventListener('click', () => openModal('gallery', i + 1))
-);
+galElements.forEach((el, i) => el.addEventListener('click', () => openModal('gallery', i + 1)));
 
 // close modal
-document
-  .getElementById('modal-close')
-  .addEventListener('click', () => closeModal());
+document.getElementById('modal-close').addEventListener('click', () => closeModal());
 
 document.getElementById('modal').addEventListener('click', (e) => {
   if (e.target.id === '' || e.target.id === 'modal') closeModal();
